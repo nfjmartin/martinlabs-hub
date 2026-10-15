@@ -72,6 +72,29 @@ const skills = [
   "SIEM & logganalys",
 ];
 
+const focusAreas = [
+  {
+    icon: Bug,
+    title: "Sårbarhetsanalys",
+    description: "Kontrollerad testning av webbapplikationer mot OWASP Top 10.",
+  },
+  {
+    icon: Network,
+    title: "Nätverkssäkerhet",
+    description: "Övervakning, segmentering och intrångsupptäckt i egen labbmiljö.",
+  },
+  {
+    icon: Lock,
+    title: "Kryptografi",
+    description: "Säker lagring, nyckelhantering och krypteringsprinciper.",
+  },
+  {
+    icon: Terminal,
+    title: "Automation",
+    description: "Egna skript och verktyg i Python för att effektivisera arbetet.",
+  },
+];
+
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -103,37 +126,59 @@ function Index() {
       </header>
 
       {/* Hero */}
-      <section id="top" className="mx-auto max-w-5xl px-6 py-24 md:py-32">
-        <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
-          <Terminal className="h-3.5 w-3.5 text-primary" />
-          IT-säkerhetsstudent
-        </p>
-        <h1 className="max-w-2xl text-4xl font-bold tracking-tight md:text-6xl">
-          Hej, jag heter Martin.
-          <span className="block text-muted-foreground">Jag studerar IT-säkerhet.</span>
-        </h1>
-        <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-          Jag brinner för att förstå hur system kan angripas — och ännu mer för hur
-          man skyddar dem. Här samlar jag mina projekt, labbar och det jag lär mig
-          under vägen.
-        </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <a
-            href="#projekt"
-            className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Se mina projekt
-            <ArrowUpRight className="h-4 w-4" />
-          </a>
-          <a
-            href={GITHUB_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:bg-accent"
-          >
-            <Github className="h-4 w-4" />
-            Följ på GitHub
-          </a>
+      <section id="top" className="mx-auto max-w-5xl px-6 py-20 md:py-28">
+        <div className="grid items-start gap-12 md:grid-cols-[1.1fr_0.9fr]">
+          <div>
+            <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-xs uppercase tracking-wide text-muted-foreground">
+              <Shield className="h-3.5 w-3.5 text-primary" />
+              IT-säkerhetsstudent
+            </p>
+            <h1 className="max-w-xl text-4xl font-bold tracking-tight md:text-5xl">
+              Säkerhet som håller
+              <span className="block text-muted-foreground">för verkliga tester.</span>
+            </h1>
+            <p className="mt-6 max-w-lg text-lg text-muted-foreground">
+              Jag studerar IT-säkerhet och arbetar med att analysera, testa och
+              härda system i egna miljöer. Allt jag bygger dokumenteras publikt på
+              GitHub — nedan ett urval av vad jag jobbat med.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#projekt"
+                className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+              >
+                Se projekten
+                <ArrowUpRight className="h-4 w-4" />
+              </a>
+              <a
+                href={GITHUB_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:bg-accent"
+              >
+                <Github className="h-4 w-4" />
+                GitHub
+              </a>
+            </div>
+          </div>
+          <aside className="rounded-xl border border-border bg-card p-6">
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+              Fokusområden
+            </h2>
+            <ul className="mt-4 space-y-4">
+              {focusAreas.map((area) => (
+                <li key={area.title} className="flex gap-3">
+                  <area.icon className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                  <div>
+                    <p className="text-sm font-medium">{area.title}</p>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      {area.description}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </aside>
         </div>
       </section>
 
@@ -142,7 +187,8 @@ function Index() {
         <div className="mx-auto grid max-w-5xl gap-10 px-6 py-20 md:grid-cols-2">
           <div>
             <h2 className="text-2xl font-bold tracking-tight">Om mig</h2>
-            <p className="mt-4 text-muted-foreground">
+            <p className="mt-4 font-medium text-foreground">Hej, jag heter Martin.</p>
+            <p className="mt-3 text-muted-foreground">
               Jag läser IT-säkerhet och tillbringar stora delar av min fritid i
               hemlabbet — där jag bygger, bryter och försvarar egna miljöer. Min
               målsättning är att arbeta med säkerhetsanalys eller penetrationstestning
