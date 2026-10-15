@@ -15,10 +15,9 @@ export const Route = createFileRoute("/kontakt")({
 });
 
 function Contact() { return (
-      {/* Kontakt / footer */}
       <section className="py-12">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 py-12 text-center">
-          <h1 className="text-xl font-bold">Kontakt</h1>
+          <h1 className="text-3xl font-bold">Kontakt</h1>
           <p className="max-w-md text-sm text-muted-foreground">
             Hör gärna av dig om du vill prata IT-säkerhet, samarbeta på ett projekt
             eller bara säga hej.
@@ -33,7 +32,7 @@ function Contact() { return (
               <Github className="h-4 w-4" />
               GitHub
             </a></Button>
-            <Button asChild><a
+            <Button asChild variant="outline"><a
               href="mailto:martin@example.com"
               
             >

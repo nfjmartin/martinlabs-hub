@@ -14,7 +14,6 @@ export const Route = createFileRoute("/om-mig")({
 });
 
 function About() { return (
-      {/* Om mig */}
       <section id="om-mig" className="py-4">
         <div className="mx-auto grid max-w-4xl gap-10 px-6 py-20 md:grid-cols-2">
           <div>

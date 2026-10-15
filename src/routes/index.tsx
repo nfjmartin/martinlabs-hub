@@ -28,7 +28,6 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() { return (
-      {/* Hero */}
       <section id="top" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-20 md:py-28">
         <div className="grid items-start gap-12 md:grid-cols-[1.1fr_0.9fr]">
           <div>
@@ -46,14 +45,11 @@ function Index() { return (
               GitHub — på projektsidan finns ett urval av vad jag jobbat med.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="#projekt"
-                
-              >
+              <Button asChild size="lg"><Link to="/projekt">
                 Se projekten
                 <ArrowUpRight className="h-4 w-4" />
-              </a>
-              <a
+              </Link></Button>
+              <Button asChild variant="outline" size="lg"><a
                 href={GITHUB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -61,7 +57,7 @@ function Index() { return (
               >
                 <Github className="h-4 w-4" />
                 GitHub
-              </a>
+              </a></Button>
             </div>
           </div>
           <aside className="border-l border-border pl-6">

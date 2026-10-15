@@ -13,7 +13,6 @@ export const Route = createFileRoute("/projekt")({
 });
 
 function Projects() { return (
-      {/* Projekt */}
       <section id="projekt" className="mx-auto max-w-6xl px-6 py-20">
         <h1 className="text-3xl font-bold">Projekt</h1>
         <p className="mt-2 text-muted-foreground">
