@@ -10,33 +10,63 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as OmMigRouteImport } from './routes/om-mig'
+import { Route as ProjektRouteImport } from './routes/projekt'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OmMigRoute = OmMigRouteImport.update({
+  id: '/om-mig',
+  path: '/om-mig',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjektRoute = ProjektRouteImport.update({
+  id: '/projekt',
+  path: '/projekt',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/kontakt': typeof KontaktRoute
+  '/om-mig': typeof OmMigRoute
+  '/projekt': typeof ProjektRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/kontakt': typeof KontaktRoute
+  '/om-mig': typeof OmMigRoute
+  '/projekt': typeof ProjektRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/kontakt': typeof KontaktRoute
+  '/om-mig': typeof OmMigRoute
+  '/projekt': typeof ProjektRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/kontakt' | '/om-mig' | '/projekt'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/kontakt' | '/om-mig' | '/projekt'
+  id: '__root__' | '/' | '/kontakt' | '/om-mig' | '/projekt'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  KontaktRoute: typeof KontaktRoute
+  OmMigRoute: typeof OmMigRoute
+  ProjektRoute: typeof ProjektRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +78,35 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/om-mig': {
+      id: '/om-mig'
+      path: '/om-mig'
+      fullPath: '/om-mig'
+      preLoaderRoute: typeof OmMigRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projekt': {
+      id: '/projekt'
+      path: '/projekt'
+      fullPath: '/projekt'
+      preLoaderRoute: typeof ProjektRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  KontaktRoute: KontaktRoute,
+  OmMigRoute: OmMigRoute,
+  ProjektRoute: ProjektRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
