@@ -47,9 +47,9 @@ const projects = [
   },
   {
     icon: Network,
-    title: "Nätverksövervakning i hemlab",
+    title: "Nätverksövervakning i privat nät",
     description:
-      "Satte upp ett hemlab med virtuella maskiner där jag analyserar nätverkstrafik och tränar på att upptäcka intrångsförsök med öppen källkod.",
+      "Byggde en Linuxbaserad sensor som övervakar nätverkstrafiken kontinuerligt. I virtuella maskiner simulerar jag intrångsförsök för att testa och förbättra detektionen. Verktyg: nmap, Wireshark, ntopng, Suricata och Wazuh.",
     tags: ["Wireshark", "Linux", "IDS"],
   },
   {
