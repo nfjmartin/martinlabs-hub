@@ -11,6 +11,9 @@
 
 # Project rules
 
+- Keep navigation in the root shared SidebarProvider and portfolio sidebar, with separate content routes for home, biography, projects and contact so page changes preserve the menu state.
+- Share portfolio content and external contact links through src/lib/portfolio.ts so all pages use one source.
+
 - The design system in `src/styles.css` is dark-only: keep `:root` as the single
   source of the palette and leave `.dark` a no-op, so no light values creep back
   in and break the gradient page background.
