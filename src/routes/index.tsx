@@ -126,7 +126,7 @@ function Index() {
       </header>
 
       {/* Hero */}
-      <section id="top" className="mx-auto max-w-5xl px-6 py-20 md:py-28">
+      <section id="top" className="mx-auto max-w-5xl scroll-mt-20 px-6 py-20 md:py-28">
         <div className="grid items-start gap-12 md:grid-cols-[1.1fr_0.9fr]">
           <div>
             <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-xs uppercase tracking-wide text-muted-foreground">
@@ -183,7 +183,7 @@ function Index() {
       </section>
 
       {/* Om mig */}
-      <section id="om-mig" className="border-t border-border bg-card">
+      <section id="om-mig" className="scroll-mt-20 border-t border-border bg-card">
         <div className="mx-auto grid max-w-5xl gap-10 px-6 py-20 md:grid-cols-2">
           <div>
             <h2 className="text-2xl font-bold tracking-tight">Om mig</h2>
@@ -219,7 +219,7 @@ function Index() {
       </section>
 
       {/* Projekt */}
-      <section id="projekt" className="mx-auto max-w-5xl px-6 py-20">
+      <section id="projekt" className="mx-auto max-w-5xl scroll-mt-20 px-6 py-20">
         <h2 className="text-2xl font-bold tracking-tight">Projekt</h2>
         <p className="mt-2 text-muted-foreground">
           Ett urval av saker jag byggt och labbat med. Mer finns på min GitHub.
