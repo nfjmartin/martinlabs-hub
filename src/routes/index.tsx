@@ -40,8 +40,9 @@ function Index() { return (
               <span className="block text-muted-foreground">för verkliga tester.</span>
             </h1>
             <p className="mt-6 max-w-lg text-lg text-muted-foreground">
-              Jag studerar IT-säkerhet och arbetar med att analysera, testa och
-              härda system i egna miljöer. Allt jag bygger dokumenteras publikt på
+              Jag studerar IT-säkerhet och arbetar med att analysera, testa,
+              automatisera och härda system i egna miljöer. Allt jag bygger
+              dokumenteras publikt på
               GitHub — på projektsidan finns ett urval av vad jag jobbat med.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
