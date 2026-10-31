@@ -12,18 +12,19 @@ export default defineConfig({
   vite: { base: "/" },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
+    // Used at build time only; never uploaded to GitHub Pages.
     server: { entry: "server" },
     pages: [
       { path: "/" },
-      { path: "/om-mig" },
-      { path: "/projekt" },
-      { path: "/kontakt" },
+      { path: "/om-mig/" },
+      { path: "/projekt/" },
+      { path: "/kontakt/" },
     ],
     prerender: {
       enabled: true,
       autoStaticPathsDiscovery: false,
       crawlLinks: false,
+      autoSubfolderIndex: true,
       failOnError: true,
     },
   },

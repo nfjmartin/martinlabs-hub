@@ -73,7 +73,7 @@ function Index() { return (
                 <p className="mt-1">
                   Hör gärna av dig via{" "}
                 <Link
-                  to="/kontakt"
+                  to="/kontakt/"
                   className="font-medium text-primary underline-offset-4 hover:underline"
                 >
                   kontaktsidan
@@ -92,7 +92,7 @@ function Index() { return (
               </div>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild size="lg"><Link to="/projekt">
+              <Button asChild size="lg"><Link to="/projekt/">
                 Se projekten
                 <ArrowUpRight className="h-4 w-4" />
               </Link></Button>
