@@ -14,6 +14,8 @@
 - Keep navigation in the root shared SidebarProvider and portfolio sidebar, with separate content routes for home, biography, projects and contact so page changes preserve the menu state.
 - Share portfolio content and external contact links through src/lib/portfolio.ts so all pages use one source.
 - Keep LIA periods in the shared portfolio data and render them on both Start and Kontakt so their dates cannot drift between pages.
+- Keep the TanStack Start/Vite bootstrap but prerender an explicit list of public routes with Nitro disabled; GitHub Pages must need only static HTML and browser JavaScript, never a running server.
+- Deploy only dist/client through the Pages workflow after materializing pointer-backed media and verifying every HTML page; Lovable asset proxy URLs otherwise break on external static hosts.
 
 - The design system in `src/styles.css` is dark-only: keep `:root` as the single
   source of the palette and leave `.dark` a no-op, so no light values creep back

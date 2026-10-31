@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
+    "build:pages": "bun run build && bun run scripts/prepare-pages.mjs && bun run verify:pages",
+    "verify:pages": "bun run scripts/verify-pages.mjs",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",

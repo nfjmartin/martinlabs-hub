@@ -8,13 +8,13 @@ import {
 
 const pages = [
   { title: "Start", url: "/", icon: Home },
-  { title: "Om mig", url: "/om-mig", icon: UserRound },
-  { title: "Se projekten", url: "/projekt", icon: FolderCode },
-  { title: "Kontakt", url: "/kontakt", icon: Mail },
+  { title: "Om mig", url: "/om-mig/", icon: UserRound },
+  { title: "Se projekten", url: "/projekt/", icon: FolderCode },
+  { title: "Kontakt", url: "/kontakt/", icon: Mail },
 ] as const;
 
 export function PortfolioSidebar() {
-  const pathname = useRouterState({ select: (router) => router.location.pathname });
+  const pathname = useRouterState({ select: (router) => router.location.pathname === "/" ? "/" : `${router.location.pathname.replace(/\/$/, "")}/` });
   const { setOpenMobile } = useSidebar();
   return (
     <Sidebar collapsible="icon">

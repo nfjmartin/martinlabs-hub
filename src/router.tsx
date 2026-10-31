@@ -7,6 +7,8 @@ export const getRouter = () => {
 
   const router = createRouter({
     routeTree,
+    // GitHub Pages resolves extensionless URLs to directory index pages.
+    trailingSlash: "always",
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,
