@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Github, Linkedin, Mail, Check } from "lucide-react";
+import { Github, Linkedin, Mail, Check, Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { GITHUB_URL, LINKEDIN_URL, EMAIL } from "@/lib/portfolio";
+import { GITHUB_URL, LINKEDIN_URL, EMAIL, liaPeriods } from "@/lib/portfolio";
 export const Route = createFileRoute("/kontakt")({
   component: Contact,
   head: () => ({ meta: [
@@ -17,13 +17,15 @@ export const Route = createFileRoute("/kontakt")({
 
 function Contact() {
   const [copied, setCopied] = useState(false);
+  const [copyError, setCopyError] = useState(false);
   const copyEmail = async () => {
     try {
       await navigator.clipboard.writeText(EMAIL);
+      setCopyError(false);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
-      window.location.href = `mailto:${EMAIL}`;
+      setCopyError(true);
     }
   };
   return (
@@ -34,15 +36,21 @@ function Contact() {
             Jag söker LIA inom IT-säkerhet — hör gärna av dig om du vill prata
             praktikplats, samarbeta på ett projekt eller bara säga hej.
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <Button onClick={copyEmail} aria-label={`Kopiera e-postadressen ${EMAIL}`}>
-              {copied ? (
-                <Check className="h-4 w-4" />
-              ) : (
-                <Mail className="h-4 w-4" />
-              )}
-              {copied ? "Kopierad!" : EMAIL}
+          <div className="text-sm text-foreground">
+            {liaPeriods.map((period) => <p key={period.start}>{period.label}</p>)}
+          </div>
+          <div className="mt-2 flex flex-wrap justify-center gap-3">
+            <Button asChild>
+              <a href={`mailto:${EMAIL}`}><Mail className="h-4 w-4" />{EMAIL}</a>
             </Button>
+            <Button variant="outline" onClick={copyEmail} aria-label={`Kopiera e-postadressen ${EMAIL}`}>
+              {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+              {copied ? "Kopierad!" : "Kopiera e-post"}
+            </Button>
+          </div>
+          <span className="sr-only" role="status">{copied ? "E-postadressen har kopierats." : ""}</span>
+          {copyError && <p role="alert" className="text-sm text-muted-foreground">Det gick inte att kopiera. Markera och kopiera adressen: {EMAIL}</p>}
+          <div className="flex flex-wrap justify-center gap-3">
             <Button asChild variant="outline"><a
               href={LINKEDIN_URL}
               target="_blank"
@@ -60,9 +68,6 @@ function Contact() {
               GitHub
             </a></Button>
           </div>
-          <p className="mt-6 text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Martin
-          </p>
         </div>
       </section>
   );
