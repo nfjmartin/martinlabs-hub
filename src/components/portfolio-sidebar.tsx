@@ -23,7 +23,7 @@ export function PortfolioSidebar() {
           <SidebarMenuButton asChild size="lg" tooltip="Martin">
             <Link to="/" onClick={() => setOpenMobile(false)}>
               <Shield className="text-primary" />
-              <span className="flex flex-col"><span className="font-semibold">Martin</span><span className="text-xs text-muted-foreground">IT-säkerhetsstudent</span></span>
+              <span className="flex flex-col group-data-[collapsible=icon]:hidden"><span className="font-semibold">Martin</span><span className="text-xs text-muted-foreground">IT-säkerhetsstudent</span></span>
             </Link>
           </SidebarMenuButton>
         </SidebarMenuItem></SidebarMenu>
