@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Github, Shield, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GITHUB_URL, focusAreas } from "@/lib/portfolio";
+import profilbild from "@/assets/profilbild.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -39,12 +40,19 @@ function Index() { return (
               Säkerhet som håller
               <span className="block text-muted-foreground">för verkliga tester.</span>
             </h1>
-            <p className="mt-6 max-w-lg text-lg text-muted-foreground">
-              Jag studerar IT-säkerhet och arbetar med att analysera, testa,
-              automatisera och härda system i egna miljöer. Allt jag bygger
-              dokumenteras publikt på
-              GitHub — på projektsidan finns ett urval av vad jag jobbat med.
-            </p>
+            <div className="mt-6 flex max-w-lg items-start gap-4">
+              <img
+                src={profilbild.url}
+                alt="Porträtt av Martin"
+                className="h-20 w-20 shrink-0 rounded-full object-cover ring-2 ring-primary/60"
+              />
+              <p className="text-lg text-muted-foreground">
+                Jag heter Martin och studerar IT-säkerhet. Arbetar med att
+                analysera, testa, automatisera och härda system i egna
+                miljöer. Allt jag bygger dokumenteras publikt på GitHub — på
+                projektsidan finns ett urval av vad jag jobbat med.
+              </p>
+            </div>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg"><Link to="/projekt">
                 Se projekten
