@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { useState } from "react";
+import { Github, Linkedin, Mail, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GITHUB_URL, LINKEDIN_URL, EMAIL } from "@/lib/portfolio";
 export const Route = createFileRoute("/kontakt")({
@@ -14,7 +15,18 @@ export const Route = createFileRoute("/kontakt")({
   ] }),
 });
 
-function Contact() { return (
+function Contact() {
+  const [copied, setCopied] = useState(false);
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      window.location.href = `mailto:${EMAIL}`;
+    }
+  };
+  return (
       <section className="py-12">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 py-12 text-center">
           <h1 className="text-3xl font-bold">Kontakt</h1>
@@ -23,12 +35,14 @@ function Contact() { return (
             eller bara säga hej.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Button asChild><a
-              href={`mailto:${EMAIL}`}
-            >
-              <Mail className="h-4 w-4" />
-              E-post
-            </a></Button>
+            <Button onClick={copyEmail} aria-label={`Kopiera e-postadressen ${EMAIL}`}>
+              {copied ? (
+                <Check className="h-4 w-4" />
+              ) : (
+                <Mail className="h-4 w-4" />
+              )}
+              {copied ? "Kopierad!" : EMAIL}
+            </Button>
             <Button asChild variant="outline"><a
               href={LINKEDIN_URL}
               target="_blank"
@@ -51,4 +65,5 @@ function Contact() { return (
           </p>
         </div>
       </section>
-); }
+  );
+}
