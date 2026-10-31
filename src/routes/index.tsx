@@ -60,6 +60,30 @@ function Index() { return (
                 className="h-44 w-44 shrink-0 rounded-full object-cover ring-2 ring-primary/60"
               />
             </div>
+            <div className="mt-8 flex max-w-lg items-start gap-3 rounded-lg border border-primary/40 bg-primary/10 p-4">
+              <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+              <p className="text-sm text-foreground/90">
+                <span className="font-semibold text-primary">Aktuellt:</span> Jag
+                söker LIA (lärande i arbete) för kommande period — hör gärna av dig
+                via{" "}
+                <Link
+                  to="/kontakt"
+                  className="font-medium text-primary underline-offset-4 hover:underline"
+                >
+                  kontaktsidan
+                </Link>{" "}
+                eller{" "}
+                <a
+                  href={LINKEDIN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-primary underline-offset-4 hover:underline"
+                >
+                  LinkedIn
+                </a>
+                .
+              </p>
+            </div>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg"><Link to="/projekt">
                 Se projekten
