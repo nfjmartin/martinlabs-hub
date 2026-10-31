@@ -49,11 +49,12 @@ function About() { return (
               Ubuntu-dator fungerar som testdator.
             </p>
             <p className="mt-4 text-muted-foreground">
-              I pipen just nu: en lokal språkmodell som via SSH styr Ubuntu-datorn
-              och agerar red team mot min egen labbmiljö. Modellen använder ett
-              konto utan sudo-behörighet samt med ytterligare begränsningar. Målet
-              är att undersöka hur långt en lokal LLM kan ta sig i ett privat,
-              segmenterat nätverk och vilka skydd som stoppar den.
+              I pipen just nu: Qwen3.8 27B Q4 som via SSH styr Ubuntu-datorn och
+              agerar red team mot min egen labbmiljö. Modellen använder ett konto
+              utan sudo-behörighet samt med ytterligare begränsningar. Målet är att
+              undersöka och mäta hur långt och snabbt en lokal LLM kan ta sig i ett
+              privat, segmenterat nätverk när den ligger helt på VRAM och vilka
+              skydd som stoppar den.
             </p>
           </div>
           <div>
