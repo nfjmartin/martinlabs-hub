@@ -31,8 +31,8 @@ function About() { return (
               </a>{" "}
               och tillbringar stora delar av min fritid i
               hemlabbet — där jag bygger, bryter och försvarar egna miljöer. Min
-              målsättning är att arbeta med säkerhetsanalys eller penetrationstestning
-              efter examen.
+              målsättning är att arbeta brett inom säkerhet, från skydd av datorer
+              och trådbundna och trådlösa nätverk till fysisk säkerhet.
             </p>
             <p className="mt-4 text-muted-foreground">
               Just nu fördjupar jag mig i nätverkssäkerhet och webbsäkerhet ur ett
