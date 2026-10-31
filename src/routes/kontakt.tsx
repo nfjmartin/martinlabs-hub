@@ -31,8 +31,8 @@ function Contact() {
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-6 py-12 text-center">
           <h1 className="text-3xl font-bold">Kontakt</h1>
           <p className="max-w-md text-sm text-muted-foreground">
-            Hör gärna av dig om du vill prata IT-säkerhet, samarbeta på ett projekt
-            eller bara säga hej.
+            Jag söker LIA inom IT-säkerhet — hör gärna av dig om du vill prata
+            praktikplats, samarbeta på ett projekt eller bara säga hej.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Button onClick={copyEmail} aria-label={`Kopiera e-postadressen ${EMAIL}`}>
