@@ -65,7 +65,8 @@ function Index() { return (
               <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
               <p className="text-sm text-foreground/90">
                 <span className="font-semibold text-primary">Aktuellt:</span> Jag
-                söker LIA (lärande i arbete) för kommande period — hör gärna av dig
+                söker LIA (lärande i arbete) vecka 35–42 2027 samt vecka 52–13
+                2027/2028 — hör gärna av dig
                 via{" "}
                 <Link
                   to="/kontakt"
