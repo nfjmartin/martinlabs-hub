@@ -20,14 +20,27 @@ function About() { return (
             <h1 className="text-3xl font-bold">Om mig</h1>
             <p className="mt-4 font-medium text-foreground">Hej, jag heter Martin.</p>
             <p className="mt-3 text-muted-foreground">
-              Jag läser IT-säkerhet och tillbringar stora delar av min fritid i
+              Jag läser IT-säkerhet på{" "}
+              <a
+                href="https://www.iths.se/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-primary underline-offset-4 hover:underline"
+              >
+                ITHS
+              </a>{" "}
+              och tillbringar stora delar av min fritid i
               hemlabbet — där jag bygger, bryter och försvarar egna miljöer. Min
               målsättning är att arbeta med säkerhetsanalys eller penetrationstestning
               efter examen.
             </p>
             <p className="mt-4 text-muted-foreground">
-              Just nu fördjupar jag mig i nätverkssäkerhet och webbsäkerhet, och jag
-              gillar att dokumentera allt jag lär mig på GitHub.
+              Just nu fördjupar jag mig i nätverkssäkerhet och webbsäkerhet ur ett
+              privat nätverksperspektiv.
+            </p>
+            <p className="mt-4 text-muted-foreground">
+              Håller ett öga på CERT-SE samt CISA för att se vad som är aktuellt
+              både på hemmaplan och i hela ligan.
             </p>
           </div>
           <div>
