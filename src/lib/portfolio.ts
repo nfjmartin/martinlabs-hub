@@ -41,7 +41,7 @@ export const focusAreas = [
   {
     icon: Bug,
     title: "Sårbarhetsanalys",
-    description: "Kontrollerad testning av webbapplikationer mot OWASP Top 10.",
+    description: "Kontrollerad testning mot OS, som Windows och Linux (client/server).",
   },
   {
     icon: Network,
