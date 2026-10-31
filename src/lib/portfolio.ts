@@ -19,13 +19,6 @@ export const projects = [
       "Byggde en Linuxbaserad sensor som övervakar nätverkstrafiken kontinuerligt. I virtuella maskiner simulerar jag intrångsförsök för att testa och förbättra detektionen. Verktyg: nmap, Wireshark, ntopng, Suricata och Wazuh.",
     tags: ["Wireshark", "Linux", "IDS"],
   },
-  {
-    icon: Lock,
-    title: "Lösenordshanterare",
-    description:
-      "En lokal lösenordshanterare med kryptering, byggd som ett skolprojekt för att lära mig kryptografi och säker lagring av känslig data.",
-    tags: ["Kryptografi", "Java", "Säker lagring"],
-  },
 ];
 
 export const skills = [

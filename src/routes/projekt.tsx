@@ -4,9 +4,9 @@ export const Route = createFileRoute("/projekt")({
   component: Projects,
   head: () => ({ meta: [
     { title: "Projekt — Martin | IT-säkerhet" },
-    { name: "description", content: "Martins projekt inom IT-säkerhet: sårbarhetsskanning, nätverksövervakning i privat nät och säker lösenordslagring." },
+    { name: "description", content: "Martins projekt inom IT-säkerhet: sårbarhetsskanning och nätverksövervakning i privat nät." },
     { property: "og:title", content: "Projekt — Martin | IT-säkerhet" },
-    { property: "og:description", content: "Martins projekt inom IT-säkerhet: sårbarhetsskanning, nätverksövervakning i privat nät och säker lösenordslagring." },
+    { property: "og:description", content: "Martins projekt inom IT-säkerhet: sårbarhetsskanning och nätverksövervakning i privat nät." },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary" },
   ] }),
