@@ -42,7 +42,16 @@ function Index() { return (
             </h1>
             <div className="mt-6 flex max-w-lg items-start gap-5">
               <p className="text-lg text-muted-foreground">
-                Jag heter Martin och studerar IT-säkerhet. Arbetar med att
+                Jag heter Martin och studerar IT-säkerhet på{" "}
+                <a
+                  href="https://www.iths.se/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-primary underline-offset-4 hover:underline"
+                >
+                  ITHS
+                </a>
+                . Arbetar med att
                 analysera, testa, automatisera och härda system i egna
                 miljöer. Allt jag bygger dokumenteras publikt på GitHub — på
                 projektsidan finns ett urval av vad jag jobbat med.
