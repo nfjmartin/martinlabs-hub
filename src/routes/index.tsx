@@ -51,8 +51,9 @@ function Index() { return (
                 >
                   ITHS
                 </a>
-                . I egna labbmiljöer
-                analyserar, testar, automatiserar och härdar jag system.
+                . I mina egna labbmiljöer
+                analyserar, testar samt härdar jag system som används både på
+                företag och i privata hem.
               </p>
               <img
                 src={profilbild.url}
