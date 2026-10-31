@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Github, Shield, ArrowUpRight } from "lucide-react";
+import { Github, Shield, ArrowUpRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { GITHUB_URL, focusAreas } from "@/lib/portfolio";
+import { GITHUB_URL, LINKEDIN_URL, focusAreas } from "@/lib/portfolio";
 import profilbild from "@/assets/profilbild-kvadrat.png.asset.json";
 
 export const Route = createFileRoute("/")({
