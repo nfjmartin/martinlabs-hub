@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Github, Shield, ArrowUpRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { GITHUB_URL, LINKEDIN_URL, focusAreas } from "@/lib/portfolio";
+import { GITHUB_URL, LINKEDIN_URL, focusAreas, liaPeriods } from "@/lib/portfolio";
 import profilbild from "@/assets/profilbild-kvadrat.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -37,8 +37,8 @@ function Index() { return (
               IT-säkerhetsstudent
             </p>
             <h1 className="max-w-xl text-4xl font-bold  md:text-5xl">
-              Säkerhet som håller
-              <span className="block text-muted-foreground">för verkliga tester.</span>
+              IT-säkerhet
+              <span className="block text-muted-foreground">i teori och praktik.</span>
             </h1>
             <div className="mt-6 flex max-w-lg items-start gap-5">
               <p className="text-lg text-muted-foreground">
@@ -52,8 +52,7 @@ function Index() { return (
                   ITHS
                 </a>
                 . I mina egna labbmiljöer
-                analyserar, testar samt härdar jag system som används både på
-                företag och i privata hem.
+                analyserar, testar och härdar jag Windows- och Linuxsystem.
               </p>
               <img
                 src={profilbild.url}
@@ -68,8 +67,9 @@ function Index() { return (
                   <span className="font-semibold text-primary">Aktuellt:</span>{" "}
                   Jag söker LIA (lärande i arbete)
                 </p>
-                <p className="mt-1">30 aug–24 okt 2027 (v. 35–42)</p>
-                <p>27 dec 2027–2 apr 2028 (v. 52–13)</p>
+                <div className="mt-1">
+                  {liaPeriods.map((period) => <p key={period.start}>{period.label}</p>)}
+                </div>
                 <p className="mt-1">
                   Hör gärna av dig via{" "}
                 <Link

@@ -4,6 +4,11 @@ export const GITHUB_URL = "https://github.com/nfjmartin";
 export const LINKEDIN_URL = "https://www.linkedin.com/in/martinlabsse/";
 export const EMAIL = "martinlabs.se@proton.me";
 
+export const liaPeriods = [
+  { start: "2027-08-30", end: "2027-10-24", weeks: [35, 42], label: "30 aug–24 okt 2027 (v. 35–42)" },
+  { start: "2027-12-27", end: "2028-04-02", weeks: [52, 13], label: "27 dec 2027–2 apr 2028 (v. 52–13)" },
+] as const;
+
 export const projects = [
   {
     icon: Terminal,

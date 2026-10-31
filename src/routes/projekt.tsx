@@ -16,8 +16,8 @@ function Projects() { return (
       <section id="projekt" className="mx-auto max-w-6xl px-6 py-20">
         <h1 className="text-3xl font-bold">Projekt</h1>
         <p className="mt-2 text-muted-foreground">
-          Ett urval av projekt jag byggt och labbat med samt en mer utförlig
-          förklaring på pågående projekt.
+          Ett urval av projekt jag byggt och labbat med, med beskrivningar av
+          både genomförda och pågående arbeten.
         </p>
         <div className="mt-8 grid gap-6 lg:grid-cols-3">
           {projects.map((project) => (
