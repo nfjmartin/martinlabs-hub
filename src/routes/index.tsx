@@ -63,11 +63,15 @@ function Index() { return (
             </div>
             <div className="mt-8 flex max-w-lg items-start gap-3 rounded-lg border border-primary/40 bg-primary/10 p-4">
               <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-              <p className="text-sm text-foreground/90">
-                <span className="font-semibold text-primary">Aktuellt:</span> Jag
-                söker LIA (lärande i arbete) 30 aug–24 okt 2027 (v. 35–42) samt
-                27 dec 2027–2 apr 2028 (v. 52–13) — hör gärna av dig
-                via{" "}
+              <div className="text-sm text-foreground/90">
+                <p>
+                  <span className="font-semibold text-primary">Aktuellt:</span>{" "}
+                  Jag söker LIA (lärande i arbete)
+                </p>
+                <p className="mt-1">30 aug–24 okt 2027 (v. 35–42)</p>
+                <p>27 dec 2027–2 apr 2028 (v. 52–13)</p>
+                <p className="mt-1">
+                  Hör gärna av dig via{" "}
                 <Link
                   to="/kontakt"
                   className="font-medium text-primary underline-offset-4 hover:underline"
@@ -84,7 +88,8 @@ function Index() { return (
                   LinkedIn
                 </a>
                 .
-              </p>
+                </p>
+              </div>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg"><Link to="/projekt">
