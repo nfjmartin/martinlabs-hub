@@ -10,7 +10,8 @@
 - [x] Kontrollera sidor och kontaktflödet samt kör tester.
 
 # GitHub Pages med egen domän
-- [ ] Generera statisk HTML för alla fyra sidor med base / och martinlabs.se.
-- [ ] Lägg till låst installation, verifiering och publicering via GitHub Actions vid push till main.
-- [ ] Dokumentera manuella GitHub Pages- och DNS-inställningar utan att ändra DNS.
-- [ ] Kör tester och verifiera de genererade sidorna och navigeringen.
+- [x] Konfigurera statisk HTML för alla fyra sidor med base / och martinlabs.se.
+- [x] Lägg till låst installation, verifiering och publicering via GitHub Actions vid push till main.
+- [x] Dokumentera manuella GitHub Pages- och DNS-inställningar utan att ändra DNS.
+- [x] Kör tester och verifiera sidnavigation, direktlänkar, omladdning, porträtt och e-post i förhandsvisningen.
+- [ ] Bekräfta produktionspaketets HTML och publicering: väntar på första GitHub Actions-körningen efter att GitHub Pages aktiverats; produktionsutdata är inte tillgängliga i förhandsvisningen.
