@@ -9,7 +9,7 @@ export const projects = [
     icon: Terminal,
     title: "Penetrationstestning",
     description:
-      "Låter en lokal LLM via SSH till en Ubuntu-maskin försöka penetrera ett lokalt nätverk. För varje omgång får den tillgång till mer verktyg och dokumentation om både nätverket och delar av verktygen och hur de kan användas. Mätning och dokumentation sker i form av: om den fastnar, vilka steg den tar samt hastigheten den fångar flaggan (på uppgifter där flagga förekommer).",
+      "En lokal LLM får via SSH till en Ubuntu-maskin i uppgift att penetrera ett lokalt nätverk. För varje omgång får den tillgång till fler verktyg samt dokumentation om nätverket och hur verktygen används. Mätning och dokumentation sker utifrån: om den fastnar, vilka steg den tar samt hur snabbt den fångar flaggan (på uppgifter där flagga förekommer). Kommande: vilka metoder som stoppar den eller endast försenar den.",
     tags: ["Pågående", "LLM", "Red team"],
   },
   {
