@@ -42,6 +42,19 @@ function About() { return (
               Håller ett öga på CERT-SE samt CISA för att se vad som är aktuellt
               både på hemmaplan och i hela ligan.
             </p>
+            <h2 className="mt-8 text-xl font-semibold">Hemmalabbet</h2>
+            <p className="mt-3 text-muted-foreground">
+              Mitt hemmalabb består av två dedikerade Windows-datorer med VMware,
+              där jag kör Windows Server, Linux Server samt klienter. En separat
+              Ubuntu-dator fungerar som testdator.
+            </p>
+            <p className="mt-4 text-muted-foreground">
+              I pipen just nu: en lokal språkmodell som via SSH styr Ubuntu-datorn
+              och agerar red team mot min egen labbmiljö. Modellen använder ett
+              konto utan sudo-behörighet samt med ytterligare begränsningar. Målet
+              är att undersöka hur långt en lokal LLM kan ta sig i ett privat,
+              segmenterat nätverk och vilka skydd som stoppar den.
+            </p>
           </div>
           <div>
             <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
