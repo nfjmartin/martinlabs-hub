@@ -52,9 +52,7 @@ function Index() { return (
                   ITHS
                 </a>
                 . I egna labbmiljöer
-                analyserar, testar, automatiserar och härdar jag system. Allt
-                jag bygger dokumenteras publikt på GitHub — på projektsidan
-                finns ett urval av vad jag jobbat med.
+                analyserar, testar, automatiserar och härdar jag system.
               </p>
               <img
                 src={profilbild.url}
