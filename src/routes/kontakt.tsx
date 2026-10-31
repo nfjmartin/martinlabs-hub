@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Github, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { GITHUB_URL } from "@/lib/portfolio";
+import { GITHUB_URL, LINKEDIN_URL, EMAIL } from "@/lib/portfolio";
 export const Route = createFileRoute("/kontakt")({
   component: Contact,
   head: () => ({ meta: [
