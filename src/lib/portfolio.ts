@@ -6,6 +6,13 @@ export const EMAIL = "martinlabs.se@proton.me";
 
 export const projects = [
   {
+    icon: Terminal,
+    title: "Penetrationstestning",
+    description:
+      "Låter en lokal LLM via SSH till en Ubuntu-maskin försöka penetrera ett lokalt nätverk. För varje omgång får den tillgång till mer verktyg och dokumentation om både nätverket och delar av verktygen och hur de kan användas. Mätning och dokumentation sker i form av: om den fastnar, vilka steg den tar samt hastigheten den fångar flaggan (på uppgifter där flagga förekommer).",
+    tags: ["Pågående", "LLM", "Red team"],
+  },
+  {
     icon: Bug,
     title: "Sårbarhetsskanner",
     description:
