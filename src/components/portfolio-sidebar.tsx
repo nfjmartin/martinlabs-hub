@@ -1,5 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Home, UserRound, FolderCode, Github, Linkedin, Mail, Shield, ArrowUpRight } from "lucide-react";
+import { useState } from "react";
+import { Home, UserRound, FolderCode, Github, Linkedin, Mail, Check, Shield, ArrowUpRight } from "lucide-react";
 import { GITHUB_URL, LINKEDIN_URL, EMAIL } from "@/lib/portfolio";
 import {
   Sidebar, SidebarHeader, SidebarContent, SidebarFooter, SidebarGroup,
@@ -16,6 +17,16 @@ const pages = [
 export function PortfolioSidebar() {
   const pathname = useRouterState({ select: (router) => router.location.pathname });
   const { setOpenMobile } = useSidebar();
+  const [emailCopied, setEmailCopied] = useState(false);
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 2000);
+    } catch {
+      window.location.href = `mailto:${EMAIL}`;
+    }
+  };
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader className="border-b border-sidebar-border py-5">
@@ -56,10 +67,9 @@ export function PortfolioSidebar() {
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton asChild tooltip="E-post">
-                  <a href={`mailto:${EMAIL}`} onClick={() => setOpenMobile(false)}>
-                    <Mail /><span>E-post</span>
-                  </a>
+                <SidebarMenuButton tooltip={emailCopied ? "Kopierad!" : "E-post"} onClick={copyEmail}>
+                  {emailCopied ? <Check className="text-primary" /> : <Mail />}
+                  <span>{emailCopied ? "Kopierad!" : "E-post"}</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
