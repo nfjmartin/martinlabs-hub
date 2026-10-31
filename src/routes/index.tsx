@@ -50,7 +50,7 @@ function Index() { return (
               <img
                 src={profilbild.url}
                 alt="Porträtt av Martin"
-                className="h-32 w-32 shrink-0 rounded-full object-cover ring-2 ring-primary/60"
+                className="h-44 w-44 shrink-0 rounded-full object-cover ring-2 ring-primary/60"
               />
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
