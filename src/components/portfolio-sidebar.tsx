@@ -14,7 +14,7 @@ const pages = [
 ] as const;
 
 export function PortfolioSidebar() {
-  const pathname = useRouterState({ select: (router) => router.location.pathname });
+  const pathname = useRouterState({ select: (router) => router.location.pathname.replace(/\/$/, "") || "/" });
   const { setOpenMobile } = useSidebar();
   return (
     <Sidebar collapsible="icon">
