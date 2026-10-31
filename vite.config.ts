@@ -7,9 +7,24 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  // GitHub Pages serves only the prerendered client files, not a server bundle.
+  nitro: false,
+  vite: { base: "/" },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    pages: [
+      { path: "/" },
+      { path: "/om-mig" },
+      { path: "/projekt" },
+      { path: "/kontakt" },
+    ],
+    prerender: {
+      enabled: true,
+      autoStaticPathsDiscovery: false,
+      crawlLinks: false,
+      failOnError: true,
+    },
   },
 });

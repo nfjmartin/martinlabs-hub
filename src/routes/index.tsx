@@ -21,10 +21,10 @@ export const Route = createFileRoute("/")({
           "Portfolio för Martin, IT-säkerhetsstudent. Projekt, kompetenser och länkar till GitHub.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://martinlabs.se/" },
       { name: "twitter:card", content: "summary" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://martinlabs.se/" }],
   }),
 });
 
