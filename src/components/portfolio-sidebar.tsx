@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Home, UserRound, FolderCode, Github, Mail, Shield, ArrowUpRight } from "lucide-react";
-import { GITHUB_URL } from "@/lib/portfolio";
+import { Home, UserRound, FolderCode, Github, Linkedin, Mail, Shield, ArrowUpRight } from "lucide-react";
+import { GITHUB_URL, LINKEDIN_URL, EMAIL } from "@/lib/portfolio";
 import {
   Sidebar, SidebarHeader, SidebarContent, SidebarFooter, SidebarGroup,
   SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarTrigger, useSidebar,
@@ -45,6 +45,20 @@ export function PortfolioSidebar() {
                 <SidebarMenuButton asChild tooltip="GitHub">
                   <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" onClick={() => setOpenMobile(false)}>
                     <Github /><span>GitHub</span><ArrowUpRight className="ml-auto group-data-[collapsible=icon]:hidden" />
+                  </a>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild tooltip="LinkedIn">
+                  <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" onClick={() => setOpenMobile(false)}>
+                    <Linkedin /><span>LinkedIn</span><ArrowUpRight className="ml-auto group-data-[collapsible=icon]:hidden" />
+                  </a>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild tooltip="E-post">
+                  <a href={`mailto:${EMAIL}`} onClick={() => setOpenMobile(false)}>
+                    <Mail /><span>E-post</span>
                   </a>
                 </SidebarMenuButton>
               </SidebarMenuItem>

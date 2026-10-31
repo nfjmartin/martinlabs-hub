@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Github, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { GITHUB_URL } from "@/lib/portfolio";
+import { GITHUB_URL, LINKEDIN_URL, EMAIL } from "@/lib/portfolio";
 export const Route = createFileRoute("/kontakt")({
   component: Contact,
   head: () => ({ meta: [
@@ -22,22 +22,28 @@ function Contact() { return (
             Hör gärna av dig om du vill prata IT-säkerhet, samarbeta på ett projekt
             eller bara säga hej.
           </p>
-          <div className="flex gap-3">
+          <div className="flex flex-wrap justify-center gap-3">
             <Button asChild><a
-              href={GITHUB_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              
-            >
-              <Github className="h-4 w-4" />
-              GitHub
-            </a></Button>
-            <Button asChild variant="outline"><a
-              href="mailto:martin@example.com"
-              
+              href={`mailto:${EMAIL}`}
             >
               <Mail className="h-4 w-4" />
               E-post
+            </a></Button>
+            <Button asChild variant="outline"><a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin className="h-4 w-4" />
+              LinkedIn
+            </a></Button>
+            <Button asChild variant="outline"><a
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="h-4 w-4" />
+              GitHub
             </a></Button>
           </div>
           <p className="mt-6 text-xs text-muted-foreground">

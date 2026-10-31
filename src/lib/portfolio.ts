@@ -1,6 +1,8 @@
 import { Bug, Network, Lock, Terminal, Radar } from "lucide-react";
 
 export const GITHUB_URL = "https://github.com/ditt-anvandarnamn";
+export const LINKEDIN_URL = "https://www.linkedin.com/in/martinlabsse/";
+export const EMAIL = "martinlabs.se@proton.me";
 
 export const projects = [
   {
