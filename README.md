@@ -1,7 +1,5 @@
 # My IT Security Hub
 
-Ska vi testa göra en hemsida för mig, jag studerar IT-säkerhet och tänker det ska finnas länkar till GitHub samt en del med projektbeskrivningar, vad jag sysslar med osv.
-
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable
