@@ -46,7 +46,7 @@ export const focusAreas = [
   {
     icon: Network,
     title: "Nätverkssäkerhet",
-    description: "Övervakning, segmentering och intrångsupptäckt i egen labbmiljö.",
+    description: "Övervakning, segmentering samt intrångsförsök och upptäckt i egen labbmiljö.",
   },
   {
     icon: Lock,
