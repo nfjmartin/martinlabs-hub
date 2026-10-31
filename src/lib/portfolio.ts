@@ -1,4 +1,4 @@
-import { Bug, Network, Lock, Terminal } from "lucide-react";
+import { Bug, Network, Lock, Terminal, Radar } from "lucide-react";
 
 export const GITHUB_URL = "https://github.com/ditt-anvandarnamn";
 
@@ -47,6 +47,11 @@ export const focusAreas = [
     icon: Network,
     title: "Nätverkssäkerhet",
     description: "Övervakning, segmentering samt intrångsförsök och upptäckt i egen labbmiljö.",
+  },
+  {
+    icon: Radar,
+    title: "Omvärldsbevakning",
+    description: "Följer säkerhetsnyheter, nya sårbarheter och trender inom IT-säkerhet.",
   },
   {
     icon: Lock,
