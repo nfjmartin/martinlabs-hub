@@ -88,7 +88,8 @@ function Index() { return (
                   LinkedIn
                 </a>
                 .
-              </p>
+                </p>
+              </div>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg"><Link to="/projekt">
