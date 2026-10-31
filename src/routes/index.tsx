@@ -40,18 +40,18 @@ function Index() { return (
               Säkerhet som håller
               <span className="block text-muted-foreground">för verkliga tester.</span>
             </h1>
-            <div className="mt-6 flex max-w-lg items-start gap-4">
-              <img
-                src={profilbild.url}
-                alt="Porträtt av Martin"
-                className="h-20 w-20 shrink-0 rounded-full object-cover ring-2 ring-primary/60"
-              />
+            <div className="mt-6 flex max-w-lg items-start gap-5">
               <p className="text-lg text-muted-foreground">
                 Jag heter Martin och studerar IT-säkerhet. Arbetar med att
                 analysera, testa, automatisera och härda system i egna
                 miljöer. Allt jag bygger dokumenteras publikt på GitHub — på
                 projektsidan finns ett urval av vad jag jobbat med.
               </p>
+              <img
+                src={profilbild.url}
+                alt="Porträtt av Martin"
+                className="h-32 w-32 shrink-0 rounded-full object-cover ring-2 ring-primary/60"
+              />
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg"><Link to="/projekt">
