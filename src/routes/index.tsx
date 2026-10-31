@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Github, Shield, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GITHUB_URL, focusAreas } from "@/lib/portfolio";
-import profilbild from "@/assets/profilbild.png.asset.json";
+import profilbild from "@/assets/profilbild-kvadrat.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -50,7 +50,7 @@ function Index() { return (
               <img
                 src={profilbild.url}
                 alt="Porträtt av Martin"
-                className="h-44 w-44 shrink-0 rounded-full object-cover object-top ring-2 ring-primary/60"
+                className="h-44 w-44 shrink-0 rounded-full object-cover ring-2 ring-primary/60"
               />
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
