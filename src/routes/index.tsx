@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Github, Shield, ArrowUpRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { GITHUB_URL, LINKEDIN_URL, focusAreas, liaPeriods } from "@/lib/portfolio";
-import profilbild from "@/assets/profilbild-kvadrat.png.asset.json";
+import profilbild from "@/assets/profilbild.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
