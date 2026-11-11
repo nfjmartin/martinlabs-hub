@@ -1,5 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Home, UserRound, FolderCode, Github, Linkedin, Mail, Shield, ArrowUpRight } from "lucide-react";
+import { Home, UserRound, FolderCode, Github, Linkedin, Mail, Shield, ArrowUpRight, Lightbulb } from "lucide-react";
 import { GITHUB_URL, LINKEDIN_URL } from "@/lib/portfolio";
 import {
   Sidebar, SidebarHeader, SidebarContent, SidebarFooter, SidebarGroup,
@@ -11,6 +11,7 @@ const pages = [
   { title: "Om mig", url: "/om-mig/", icon: UserRound },
   { title: "Se projekten", url: "/projekt/", icon: FolderCode },
   { title: "Kontakt", url: "/kontakt/", icon: Mail },
+  { title: "Bra att ha", url: "/bra-att-ha/", icon: Lightbulb },
 ] as const;
 
 export function PortfolioSidebar() {

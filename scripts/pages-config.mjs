@@ -1,5 +1,5 @@
 // Build-time settings only. Keep Pages' URL paths aligned with the route files.
-export const pagesPaths = ["/", "/om-mig", "/projekt", "/kontakt"];
+export const pagesPaths = ["/", "/om-mig", "/projekt", "/kontakt", "/bra-att-ha"];
 export const pagesDomain = "martinlabs.se";
 export const pagesOutput = "dist/client";
 export const assetOrigin =

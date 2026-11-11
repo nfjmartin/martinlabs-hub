@@ -5,7 +5,7 @@ import { QueryClient } from "@tanstack/react-query";
 import { routeTree } from "@/routeTree.gen";
 
 describe("GitHub Pages URLs", () => {
-  it.each(["/om-mig", "/projekt", "/kontakt"])("resolves %s with and without the Pages trailing slash", (path) => {
+  it.each(["/om-mig", "/projekt", "/kontakt", "/bra-att-ha"])("resolves %s with and without the Pages trailing slash", (path) => {
     const router = createRouter({
       routeTree,
       trailingSlash: "always",

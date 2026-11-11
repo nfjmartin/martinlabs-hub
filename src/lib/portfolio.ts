@@ -33,6 +33,46 @@ export const projects = [
   },
 ];
 
+export const helpfulLinks = [
+  {
+    name: "Fixit",
+    url: "https://fixit.com/",
+    description:
+      "Läs hur du lagar massor av saker själv, från mobilskärmen till hemelektroniken, istället för att slänga det.",
+  },
+  {
+    name: "Have I Been Pwned",
+    url: "https://haveibeenpwned.com/",
+    description:
+      "Kontrollera om din e-postadress har förekommit i ett känt dataintrång. Har den det är det dags att byta lösenord där.",
+  },
+] as const;
+
+export const windowsTools = {
+  intro: "Då föreslår jag att du laddar ner Autoruns och Process Explorer från Microsofts hemsida.",
+  links: [
+    {
+      name: "Autoruns",
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns",
+      description:
+        "Autoruns visar program och tjänster som startar automatiskt i Windows, som i sin tur kan kontrolleras mot VirusTotal.",
+    },
+    {
+      name: "Process Explorer",
+      url: "https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer",
+      description:
+        "Process Explorer visar aktiva processer på din dator och kan kontrollera dem mot VirusTotal.",
+    },
+  ],
+} as const;
+
+export const virusTotalLink = {
+  name: "VirusTotal",
+  url: "https://www.virustotal.com/",
+  description:
+    "Kontrollera filer, adresser och IP-nummer mot en stor mängd säkerhetsmotorer samtidigt.",
+} as const;
+
 export const skills = [
   "Nätverkssäkerhet",
   "Penetrationstestning",

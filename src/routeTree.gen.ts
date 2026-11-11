@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BraAttHaRouteImport } from './routes/bra-att-ha'
 import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as OmMigRouteImport } from './routes/om-mig'
 import { Route as ProjektRouteImport } from './routes/projekt'
@@ -17,6 +18,11 @@ import { Route as ProjektRouteImport } from './routes/projekt'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BraAttHaRoute = BraAttHaRouteImport.update({
+  id: '/bra-att-ha',
+  path: '/bra-att-ha',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KontaktRoute = KontaktRouteImport.update({
@@ -37,12 +43,14 @@ const ProjektRoute = ProjektRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/bra-att-ha': typeof BraAttHaRoute
   '/kontakt': typeof KontaktRoute
   '/om-mig': typeof OmMigRoute
   '/projekt': typeof ProjektRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/bra-att-ha': typeof BraAttHaRoute
   '/kontakt': typeof KontaktRoute
   '/om-mig': typeof OmMigRoute
   '/projekt': typeof ProjektRoute
@@ -50,20 +58,22 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/bra-att-ha': typeof BraAttHaRoute
   '/kontakt': typeof KontaktRoute
   '/om-mig': typeof OmMigRoute
   '/projekt': typeof ProjektRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/kontakt' | '/om-mig' | '/projekt'
+  fullPaths: '/' | '/bra-att-ha' | '/kontakt' | '/om-mig' | '/projekt'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/kontakt' | '/om-mig' | '/projekt'
-  id: '__root__' | '/' | '/kontakt' | '/om-mig' | '/projekt'
+  to: '/' | '/bra-att-ha' | '/kontakt' | '/om-mig' | '/projekt'
+  id: '__root__' | '/' | '/bra-att-ha' | '/kontakt' | '/om-mig' | '/projekt'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BraAttHaRoute: typeof BraAttHaRoute
   KontaktRoute: typeof KontaktRoute
   OmMigRoute: typeof OmMigRoute
   ProjektRoute: typeof ProjektRoute
@@ -76,6 +86,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bra-att-ha': {
+      id: '/bra-att-ha'
+      path: '/bra-att-ha'
+      fullPath: '/bra-att-ha'
+      preLoaderRoute: typeof BraAttHaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/kontakt': {
@@ -104,6 +121,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BraAttHaRoute: BraAttHaRoute,
   KontaktRoute: KontaktRoute,
   OmMigRoute: OmMigRoute,
   ProjektRoute: ProjektRoute,

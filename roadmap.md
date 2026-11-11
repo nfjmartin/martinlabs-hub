@@ -10,7 +10,8 @@
 - [x] Kontrollera sidor och kontaktflödet samt kör tester.
 
 # Bra att ha-flik
-- [ ] Ny sida med Martins egna länktips (nyttiga hemsidor för läsaren, t.ex. fixit.com) — väntar på hans länklista innan sidan byggs.
+- [x] Ny sida med Martins egna länktips: Fixit, Have I Been Pwned, Autoruns, Process Explorer och VirusTotal längst ner.
+- [x] Kontrollera sidan och kör tester.
 
 # GitHub Pages med egen domän
 - [x] Konfigurera statisk HTML för alla fyra sidor med base / och martinlabs.se.

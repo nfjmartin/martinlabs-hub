@@ -19,6 +19,7 @@ export default defineConfig({
       { path: "/om-mig/" },
       { path: "/projekt/" },
       { path: "/kontakt/" },
+      { path: "/bra-att-ha/" },
     ],
     prerender: {
       enabled: true,

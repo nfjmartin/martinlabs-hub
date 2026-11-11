@@ -28,6 +28,7 @@ dist/client/
   om-mig/index.html
   projekt/index.html
   kontakt/index.html
+  bra-att-ha/index.html
   404.html
   CNAME
   .nojekyll
@@ -35,7 +36,7 @@ dist/client/
   __l5e/assets-v1/.../profilbild-kvadrat.png
 ```
 
-Vite använder `base: "/"` eftersom domänen är **martinlabs.se** (inte marinlabs.se). GitHub Pages öppnar `/om-mig`, `/projekt` och `/kontakt` som katalogernas HTML-sidor, vanligtvis med en omdirigering till avslutande `/`. Routern använder därför samma avslutande snedstreck; direktlänkar och omladdningar behöver ingen serverfallback eller hash-routing. Okända adresser ger en riktig 404.
+Vite använder `base: "/"` eftersom domänen är **martinlabs.se** (inte marinlabs.se). GitHub Pages öppnar `/om-mig`, `/projekt`, `/kontakt` och `/bra-att-ha` som katalogernas HTML-sidor, vanligtvis med en omdirigering till avslutande `/`. Routern använder därför samma avslutande snedstreck; direktlänkar och omladdningar behöver ingen serverfallback eller hash-routing. Okända adresser ger en riktig 404.
 
 ## GitHub Pages — manuella inställningar
 
@@ -72,7 +73,7 @@ För `www.martinlabs.se`, lägg `CNAME www → nfjmartin.github.io` **om repot �
 
 ## Kontroll efter publicering
 
-- Öppna `https://martinlabs.se/`, `/om-mig`, `/projekt` och `/kontakt` direkt, även i en ny flik, och ladda om varje sida.
+- Öppna `https://martinlabs.se/`, `/om-mig`, `/projekt`, `/kontakt` och `/bra-att-ha` direkt, även i en ny flik, och ladda om varje sida.
 - Kontrollera att porträttet visas och att sidomenyn markerar rätt sida och behåller sitt hopfällda läge när du navigerar.
 - Testa e-postlänken, kopieringsknappen samt GitHub och LinkedIn.
 - En lyckad körning i Actions bekräftar **produktionsbygge och filverifiering**. Ett lokalt utvecklingstest bekräftar inte DNS, HTTPS eller att GitHub Pages är aktiverat.
