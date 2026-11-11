@@ -46,6 +46,12 @@ export const helpfulLinks = [
     description:
       "Kontrollera om din e-postadress har förekommit i ett känt dataintrång. Har den det är det dags att byta lösenord där.",
   },
+  {
+    name: "VirusTotal",
+    url: "https://www.virustotal.com/",
+    description:
+      "Kontrollera filer, adresser och IP-nummer mot en stor mängd säkerhetsmotorer samtidigt.",
+  },
 ] as const;
 
 export const windowsTools = {
@@ -65,13 +71,6 @@ export const windowsTools = {
         "Process Explorer visar aktiva processer på din dator och kan kontrollera dem mot VirusTotal.",
     },
   ],
-} as const;
-
-export const virusTotalLink = {
-  name: "VirusTotal",
-  url: "https://www.virustotal.com/",
-  description:
-    "Kontrollera filer, adresser och IP-nummer mot en stor mängd säkerhetsmotorer samtidigt.",
 } as const;
 
 export const skills = [

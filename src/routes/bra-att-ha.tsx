@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
-import { helpfulLinks, virusTotalLink, windowsTools } from "@/lib/portfolio";
+import { helpfulLinks, windowsTools } from "@/lib/portfolio";
 
 export const Route = createFileRoute("/bra-att-ha")({
   component: Helpful,
@@ -10,13 +10,13 @@ export const Route = createFileRoute("/bra-att-ha")({
       {
         name: "description",
         content:
-          "Sidor och program jag själv använder: Fixit, Have I Been Pwned, Autoruns, Process Explorer och VirusTotal.",
+          "Sidor och program jag själv använder: Fixit, Have I Been Pwned och VirusTotal, samt Autoruns och Process Explorer.",
       },
       { property: "og:title", content: "Bra att ha — Martin | IT-säkerhet" },
       {
         property: "og:description",
         content:
-          "Sidor och program jag själv använder: Fixit, Have I Been Pwned, Autoruns, Process Explorer och VirusTotal.",
+          "Sidor och program jag själv använder: Fixit, Have I Been Pwned och VirusTotal, samt Autoruns och Process Explorer.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -60,11 +60,6 @@ function Helpful() {
         {helpfulLinks.map((item) => (
           <LinkCard key={item.url} item={item} />
         ))}
-      </ul>
-
-      <h2 className="mt-12 text-xl font-semibold">Kontrollera mot VirusTotal</h2>
-      <ul className="mt-6 space-y-4">
-        <LinkCard item={virusTotalLink} />
       </ul>
 
       <div className="mt-4 ml-4 border-l-2 border-primary/40 pl-6 sm:ml-8">
