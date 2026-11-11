@@ -9,6 +9,9 @@
 - [x] Visa LIA-perioder på Kontakt, erbjud e-postlänk och kopiering, ta bort dubbel upphovsrad.
 - [x] Kontrollera sidor och kontaktflödet samt kör tester.
 
+# Bra att ha-flik
+- [ ] Ny sida med Martins egna länktips (nyttiga hemsidor för läsaren, t.ex. fixit.com) — väntar på hans länklista innan sidan byggs.
+
 # GitHub Pages med egen domän
 - [x] Konfigurera statisk HTML för alla fyra sidor med base / och martinlabs.se.
 - [x] Lägg till låst installation, verifiering och publicering via GitHub Actions vid push till main.
