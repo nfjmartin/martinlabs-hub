@@ -49,6 +49,7 @@ export const helpfulLinks = [
 ] as const;
 
 export const windowsTools = {
+  heading: "Känns det komplicerat?",
   intro: "Då föreslår jag att du laddar ner Autoruns och Process Explorer från Microsofts hemsida.",
   links: [
     {

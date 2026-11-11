@@ -10,7 +10,7 @@
 - [x] Kontrollera sidor och kontaktflödet samt kör tester.
 
 # Bra att ha-flik
-- [x] Ny sida med Martins egna länktips: Fixit, Have I Been Pwned, Autoruns, Process Explorer och VirusTotal längst ner.
+- [x] Ny sida med Martins egna länktips: Fixit och Have I Been Pwned, samt VirusTotal där Autoruns och Process Explorer ligger som en underdel.
 - [x] Kontrollera sidan och kör tester.
 
 # GitHub Pages med egen domän

@@ -14,15 +14,19 @@ describe("Bra att ha-listan", () => {
     expect(virusTotalLink.url).toBe("https://www.virustotal.com/");
   });
 
-  it("puts VirusTotal last, after the Windows tools", () => {
+  it("lists the Windows tools as a sub-part of the VirusTotal section", () => {
     const order = [
       ...helpfulLinks.map((link) => link.url),
-      ...windowsTools.links.map((link) => link.url),
       virusTotalLink.url,
+      ...windowsTools.links.map((link) => link.url),
     ];
     expect(order).toHaveLength(5);
-    expect(order.at(-1)).toBe(virusTotalLink.url);
+    expect(order.indexOf(virusTotalLink.url)).toBeLessThan(
+      order.indexOf(windowsTools.links[0].url),
+    );
+    expect(order.at(-1)).toBe(windowsTools.links[1].url);
     expect(new Set(order).size).toBe(order.length);
+    expect(windowsTools.heading.length).toBeGreaterThan(0);
   });
 
   it("points both Windows tools at VirusTotal", () => {

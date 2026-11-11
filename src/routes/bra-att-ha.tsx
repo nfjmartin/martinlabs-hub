@@ -62,18 +62,20 @@ function Helpful() {
         ))}
       </ul>
 
-      <h2 className="mt-12 text-xl font-semibold">Känns det komplicerat?</h2>
-      <p className="mt-2 text-muted-foreground">{windowsTools.intro}</p>
-      <ul className="mt-6 space-y-4">
-        {windowsTools.links.map((item) => (
-          <LinkCard key={item.url} item={item} />
-        ))}
-      </ul>
-
       <h2 className="mt-12 text-xl font-semibold">Kontrollera mot VirusTotal</h2>
       <ul className="mt-6 space-y-4">
         <LinkCard item={virusTotalLink} />
       </ul>
+
+      <div className="mt-4 ml-4 border-l-2 border-primary/40 pl-6 sm:ml-8">
+        <h3 className="text-lg font-semibold">{windowsTools.heading}</h3>
+        <p className="mt-2 text-muted-foreground">{windowsTools.intro}</p>
+        <ul className="mt-5 space-y-4">
+          {windowsTools.links.map((item) => (
+            <LinkCard key={item.url} item={item} />
+          ))}
+        </ul>
+      </div>
     </section>
   );
 }
