@@ -47,6 +47,12 @@ export const helpfulLinks = [
       "Kontrollera om din e-postadress har förekommit i ett känt dataintrång. Har den det är det dags att byta lösenord där.",
   },
   {
+    name: "EmailOSINT",
+    url: "https://emailosint.org/",
+    description:
+      "Se vad en främling kan hitta på din e-postadress: konton den kopplas till, läckor och annan exponering. Värt att kolla sin egen innan någon annan gör det.",
+  },
+  {
     name: "VirusTotal",
     url: "https://www.virustotal.com/",
     description:

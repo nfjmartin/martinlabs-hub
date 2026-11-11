@@ -8,6 +8,7 @@ describe("Bra att ha-listan", () => {
     expect(helpfulLinks.map((link) => link.url)).toEqual([
       "https://fixit.com/",
       "https://haveibeenpwned.com/",
+      "https://emailosint.org/",
       VIRUSTOTAL,
     ]);
     expect(windowsTools.links.map((link) => link.url)).toEqual([
@@ -22,7 +23,7 @@ describe("Bra att ha-listan", () => {
       ...helpfulLinks.map((link) => link.url),
       ...windowsTools.links.map((link) => link.url),
     ];
-    expect(order).toHaveLength(5);
+    expect(order).toHaveLength(6);
     expect(order.indexOf(VIRUSTOTAL)).toBeLessThan(
       order.indexOf(windowsTools.links[0].url),
     );
