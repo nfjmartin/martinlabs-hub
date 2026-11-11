@@ -73,6 +73,24 @@ export const windowsTools = {
   ],
 } as const;
 
+export const riskUpdates = {
+  heading: "Håll dig uppdaterad om säkerhetsriskerna som pågår just nu",
+  links: [
+    {
+      name: "Svensk Handel – Säkerhet",
+      url: "https://www.svenskhandel.se/sakerhet/",
+      description:
+        "Svensk Handels säkerhetssida med checklistor, guider och en varningslista – plus löpande nyheter om bedrägerier och brott i handeln.",
+    },
+    {
+      name: "Hackhint CVE Tracker",
+      url: "https://cve.hackhint.com/",
+      description:
+        "Live-lista över nyligen publicerade sårbarheter med CVSS-bedömning, uppdaterad varannan timme mot den officiella NVD-databasen.",
+    },
+  ],
+} as const;
+
 export const skills = [
   "Nätverkssäkerhet",
   "Penetrationstestning",

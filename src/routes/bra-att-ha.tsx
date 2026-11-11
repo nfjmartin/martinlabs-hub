@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
-import { helpfulLinks, windowsTools } from "@/lib/portfolio";
+import { helpfulLinks, riskUpdates, windowsTools } from "@/lib/portfolio";
 
 export const Route = createFileRoute("/bra-att-ha")({
   component: Helpful,
@@ -67,6 +67,15 @@ function Helpful() {
         <p className="mt-2 text-muted-foreground">{windowsTools.intro}</p>
         <ul className="mt-5 space-y-4">
           {windowsTools.links.map((item) => (
+            <LinkCard key={item.url} item={item} />
+          ))}
+        </ul>
+      </div>
+
+      <div className="mt-12">
+        <h2 className="text-lg font-semibold">{riskUpdates.heading}</h2>
+        <ul className="mt-5 space-y-4">
+          {riskUpdates.links.map((item) => (
             <LinkCard key={item.url} item={item} />
           ))}
         </ul>

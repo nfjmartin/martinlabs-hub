@@ -12,6 +12,7 @@
 # Bra att ha-flik
 - [x] Ny sida med Martins egna länktips: Fixit och Have I Been Pwned, samt VirusTotal där Autoruns och Process Explorer ligger som en underdel.
 - [x] Kontrollera sidan och kör tester.
+- [x] Lägg till Svensk Handel – Säkerhet och Hackhint CVE Tracker under rubriken "Håll dig uppdaterad om säkerhetsriskerna som pågår just nu".
 
 # GitHub Pages med egen domän
 - [x] Konfigurera statisk HTML för alla fyra sidor med base / och martinlabs.se.

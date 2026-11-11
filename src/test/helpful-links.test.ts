@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { helpfulLinks, windowsTools } from "@/lib/portfolio";
+import { helpfulLinks, riskUpdates, windowsTools } from "@/lib/portfolio";
 
 const VIRUSTOTAL = "https://www.virustotal.com/";
 
@@ -37,8 +37,22 @@ describe("Bra att ha-listan", () => {
     }
   });
 
+  it("keeps the two current-risk links in their own group, never duplicated elsewhere", () => {
+    expect(riskUpdates.links.map((link) => link.url)).toEqual([
+      "https://www.svenskhandel.se/sakerhet/",
+      "https://cve.hackhint.com/",
+    ]);
+    expect(riskUpdates.heading).toContain("säkerhetsriskerna");
+    const all = [
+      ...helpfulLinks,
+      ...windowsTools.links,
+      ...riskUpdates.links,
+    ].map((link) => link.url);
+    expect(new Set(all).size).toBe(all.length);
+  });
+
   it("gives every listed page a name and a description", () => {
-    for (const item of [...helpfulLinks, ...windowsTools.links]) {
+    for (const item of [...helpfulLinks, ...windowsTools.links, ...riskUpdates.links]) {
       expect(item.name.length).toBeGreaterThan(0);
       expect(item.description.length).toBeGreaterThan(20);
     }
